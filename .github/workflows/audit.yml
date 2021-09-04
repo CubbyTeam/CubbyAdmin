@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  audit:
     runs-on: ubuntu-latest
 
     strategy:
@@ -37,5 +37,8 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Format
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
