@@ -1,23 +1,39 @@
 {
-  "name": "cubby_server_admin",
+  "name": "cubby_admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format:check": "npx prettier --check .",
+    "format:write": "npx prettier --write .",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@babel/core": "^7.15.0",
+    "@chakra-ui/react": "^1.6.7",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@types/react": "17.0.18",
+    "babel-jest": "^27.1.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.1.0",
+    "prettier": "^2.3.2",
+    "react-test-renderer": "^17.0.2",
     "typescript": "4.3.5"
   }
 }
